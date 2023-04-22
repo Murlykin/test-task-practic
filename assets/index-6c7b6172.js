@@ -67,5 +67,8 @@ flex-direction: column;
 `,V1=Lr.div`
 display: flex;
 gap: 20px;
- width: 1200px;
+justify-content: center;
+align-items: center;
+ flex-wrap: wrap;
+ 
 `,W1=()=>{const[e,t]=L.useState([]),n=O0(),r=n.useState(i=>i.value?"Checked":"Unchecked");return L.useEffect(()=>{By().then(i=>{t(i)})},[]),ee.jsx(V1,{children:e.map(i=>ee.jsxs(B1,{children:[ee.jsx("img",{src:i.avatar,alt:""}),ee.jsxs("p",{children:[i.user," "]}),ee.jsxs("p",{children:[i.tweets," TWEETS"]}),ee.jsxs("p",{children:[i.followers," FOLLOWERS"]}),ee.jsx(H1,{as:"button",store:n,children:r})]},i.id))})},Q1=()=>ee.jsx("div",{children:ee.jsx(W1,{})});function K1(){return ee.jsx(ee.Fragment,{children:ee.jsx(Q1,{})})}ol.createRoot(document.getElementById("root")).render(ee.jsx(hc.StrictMode,{children:ee.jsx(K1,{})}));
