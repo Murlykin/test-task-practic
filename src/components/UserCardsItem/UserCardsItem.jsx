@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { getUsers } from '../../servises/usersApi';
-import { Checkbox, useCheckboxStore } from '@ariakit/react';
+import { useCheckboxStore } from '@ariakit/react';
 
-import { UserCards, CheckboxButton } from './UserCardsItem.styled';
+import { UserCards, CheckboxButton, Cards } from './UserCardsItem.styled';
 
 export const UserCardsItem = () => {
   const [users, setUsers] = useState([]);
@@ -15,21 +15,22 @@ export const UserCardsItem = () => {
     });
   }, []);
 
-  console.log(users);
+  // console.log(users);
 
   return (
-    <div>
+    <Cards>
       {users.map(user => (
         <UserCards key={user.id}>
           <img src={user.avatar} alt="" />
+          <p>{user.user} </p>
           <p>{user.tweets} TWEETS</p>
-          <p>{user.followers} FOLOWERS</p>
-          <input type="checkbox" />
-          <CheckboxButton as="button" store={checkbox} className="button">
+          <p>{user.followers} FOLLOWERS</p>user
+        
+          <CheckboxButton as="button" store={checkbox}>
             {label}
           </CheckboxButton>
         </UserCards>
       ))}
-    </div>
+    </Cards>
   );
 };
