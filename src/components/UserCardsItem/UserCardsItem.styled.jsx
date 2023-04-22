@@ -24,5 +24,8 @@ export const CheckboxButton = styled(Checkbox)`
 export const Cards = styled.div`
 display: flex;
 gap: 20px;
- width: 1200px;
+justify-content: center;
+align-items: center;
+ flex-wrap: wrap;
+ 
 `
