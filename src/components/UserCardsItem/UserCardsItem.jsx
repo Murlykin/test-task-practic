@@ -24,7 +24,7 @@ export const UserCardsItem = () => {
           <img src={user.avatar} alt="" />
           <p>{user.user} </p>
           <p>{user.tweets} TWEETS</p>
-          <p>{user.followers} FOLLOWERS</p>user
+          <p>{user.followers} FOLLOWERS</p>
         
           <CheckboxButton as="button" store={checkbox}>
             {label}
