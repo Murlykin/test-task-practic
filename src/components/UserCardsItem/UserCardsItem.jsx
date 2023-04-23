@@ -1,36 +1,67 @@
 import { useState, useEffect } from 'react';
-import { getUsers } from '../../servises/usersApi';
-import { useCheckboxStore } from '@ariakit/react';
+import { updateUser } from '../../servises/usersApi';
 
-import { UserCards, CheckboxButton, Cards } from './UserCardsItem.styled';
+import image from '../../images/picture21.png';
+import logo from '../../images/logo.png';
 
-export const UserCardsItem = () => {
-  const [users, setUsers] = useState([]);
-  const checkbox = useCheckboxStore();
-  const label = checkbox.useState(state => (state.value ? 'Checked' : 'Unchecked'));
+import {
+  CardsItem,
+  CheckboxContainer,
+  Logo,
+  BgImage,
+  Rectangle,
+  AvatarWrap,
+  Avatar,
+  User,
+  Tweets,
+  Followers,
+  CheckboxInput,
+  CheckboxInputLabelOff,
+  CheckboxInputLabelOn,
+} from './UserCardsItem.styled';
 
-  useEffect(() => {
-    getUsers().then(data => {
-      setUsers(data);
-    });
-  }, []);
+export const UserCardsItem = users => {
+  const { id, avatar, tweets, followers, check, user} = users.user;
 
-  // console.log(users);
+  const [checked, setChecked] = useState(check);
+  const [follow, setFollow] = useState(followers);
+
+  useEffect(() => {}, []);
+
+  const folowersChange = async () => {
+    setChecked(!checked);
+
+    console.log(checked, id);
+
+    if (!checked) {
+      setFollow(prevState => prevState + 1);
+      // setChecked(prevState => prevState, true);
+
+      await updateUser(id, follow + 1, true);
+    } else {
+      setFollow(prevState => prevState - 1);
+      await updateUser(id, follow - 1, false);
+    }
+  };
 
   return (
-    <Cards>
-      {users.map(user => (
-        <UserCards key={user.id}>
-          <img src={user.avatar} alt="" />
-          <p>{user.user} </p>
-          <p>{user.tweets} TWEETS</p>
-          <p>{user.followers} FOLLOWERS</p>
-        
-          <CheckboxButton as="button" store={checkbox}>
-            {label}
-          </CheckboxButton>
-        </UserCards>
-      ))}
-    </Cards>
+    <CardsItem key={id}>
+      <Logo src={logo} alt="goit logo" />
+      <BgImage src={image} alt="background image" />
+      <Rectangle />
+      <AvatarWrap />
+      <Avatar src={avatar} alt="user avatar" />
+      <User>{user} </User>
+      <Tweets>{tweets} TWEETS</Tweets>
+      <Followers>{follow} FOLLOWERS</Followers>
+      <CheckboxContainer>
+        <CheckboxInput type="checkbox" id={id} checked={checked} onChange={folowersChange} />
+        {checked ? (
+          <CheckboxInputLabelOn htmlFor={id}>Following</CheckboxInputLabelOn>
+        ) : (
+          <CheckboxInputLabelOff htmlFor={id}>Follow</CheckboxInputLabelOff>
+        )}
+      </CheckboxContainer>
+    </CardsItem>
   );
 };
