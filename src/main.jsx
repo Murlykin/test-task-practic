@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { HashRouter } from "react-router-dom";
 import { App } from "./components/App/App.jsx";
 import "./index.css";
-
+import './button-up';
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <HashRouter>
