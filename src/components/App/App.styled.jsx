@@ -43,7 +43,6 @@ export const Nav = styled.nav`
   margin-right: 40px;
 `;
 
-
 export const HeaderText = styled.p`
   text-align: center;
   align-items: center;
@@ -54,7 +53,6 @@ export const HeaderText = styled.p`
   line-height: 1.2;
   text-transform: uppercase;
   text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-
 `;
 
 export const Footer = styled.footer`
