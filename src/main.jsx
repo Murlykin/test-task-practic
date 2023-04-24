@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <HashRouter>
       <App />
    </HashRouter> */}
-        <BrowserRouter basename="/test-task-practic">
+        <BrowserRouter basename="/Murlykin/test-task-practic">
       <App />
     </BrowserRouter>
   </React.StrictMode>
