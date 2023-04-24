@@ -36,8 +36,13 @@ export const StyledLink = styled(NavLink)`
 
 export const Logo = styled.img`
   height: 38px;
-  margin-left: 20px;
+  margin-left: 40px;
 `;
+
+export const Nav = styled.nav`
+  margin-right: 40px;
+`;
+
 
 export const HeaderText = styled.p`
   text-align: center;
