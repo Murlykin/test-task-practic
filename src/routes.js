@@ -1,4 +1,4 @@
-export const routes = {
-  HOME: "/",
+export const Routes = {
+  Home: "/test-task-practic",
   TWEETS: "/tweets",
 };
