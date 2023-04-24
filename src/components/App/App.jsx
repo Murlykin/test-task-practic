@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 
 import { Home } from '../../pages/Home/Home';
-import { Cards } from '../../pages/Cards/Cards';
+import { Tweets } from '../../pages/Tweets/Tweets';
 import { NotFound } from '../../pages/NotFound';
 
 import logoGoIt from '../../images/goit.png';
@@ -18,13 +18,13 @@ export const App = () => {
           <StyledLink to="/" end>
             Home
           </StyledLink>
-          <StyledLink to="/cards">tweets</StyledLink>
+          <StyledLink to="/tweets">tweets</StyledLink>
         </nav>
       </Header>
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cards" element={<Cards />} />
+        <Route path="/tweets" element={<Tweets />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer> created by A.Murlykin 2023 © </Footer>

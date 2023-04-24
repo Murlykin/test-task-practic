@@ -1,5 +1,5 @@
 import { UserCards } from '../../components/UserCards/UserCards';
 
-export const Cards = () => {
+export const Tweets = () => {
   return <UserCards />;
 };
