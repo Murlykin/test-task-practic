@@ -26,7 +26,7 @@ export const BgImage = styled.img`
 `;
 
 export const Rectangle = styled.div`
-  margin-top: 18px;
+  margin-top: 30px;
   width: 380px;
   height: 8px;
   background: #ebd8ff;
@@ -62,7 +62,7 @@ export const Avatar = styled.img`
 
 
 export const User = styled.p`
-  margin-top: 60px;
+  margin-top: 50px;
   text-align: center;
   font-family: 'Montserrat';
   font-style: normal;
@@ -103,7 +103,7 @@ export const CheckboxInput = styled.input`
 
 export const CheckboxInputLabelOff = styled.label`
   display: inline-block;
-  margin-top: 16px;
+  margin-top: 10px;
   padding: 14px 56px;
   font-family: 'Montserrat';
   font-style: normal;
@@ -120,7 +120,7 @@ export const CheckboxInputLabelOff = styled.label`
 
 export const CheckboxInputLabelOn = styled.label`
   display: inline-block;
-  margin-top: 16px;
+  margin-top: 10px;
   padding: 14px 39px;
   font-family: 'Montserrat';
   font-style: normal;

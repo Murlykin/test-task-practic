@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import { updateUser } from '../../servises/usersApi';
+import { useState, useEffect } from "react";
+import { updateUser } from "../../servises/usersApi";
 
-import image from '../../images/picture21.png';
-import logo from '../../images/logo.png';
+import image from "../../images/picture21.png";
+import logo from "../../images/logo.png";
 
 import {
   CardsItem,
@@ -18,10 +18,10 @@ import {
   CheckboxInput,
   CheckboxInputLabelOff,
   CheckboxInputLabelOn,
-} from './UserCardsItem.styled';
+} from "./UserCardsItem.styled";
 
-export const UserCardsItem = users => {
-  const { id, avatar, tweets, followers, check, user} = users.user;
+export const UserCardsItem = (users) => {
+  const { id, avatar, tweets, followers, check, user } = users.user;
 
   const [checked, setChecked] = useState(check);
   const [follow, setFollow] = useState(followers);
@@ -31,15 +31,11 @@ export const UserCardsItem = users => {
   const folowersChange = async () => {
     setChecked(!checked);
 
-    console.log(checked, id);
-
     if (!checked) {
-      setFollow(prevState => prevState + 1);
-      // setChecked(prevState => prevState, true);
-
+      setFollow((prevState) => prevState + 1);
       await updateUser(id, follow + 1, true);
     } else {
-      setFollow(prevState => prevState - 1);
+      setFollow((prevState) => prevState - 1);
       await updateUser(id, follow - 1, false);
     }
   };
@@ -55,7 +51,12 @@ export const UserCardsItem = users => {
       <Tweets>{tweets} TWEETS</Tweets>
       <Followers>{follow} FOLLOWERS</Followers>
       <CheckboxContainer>
-        <CheckboxInput type="checkbox" id={id} checked={checked} onChange={folowersChange} />
+        <CheckboxInput
+          type="checkbox"
+          id={id}
+          checked={checked}
+          onChange={folowersChange}
+        />
         {checked ? (
           <CheckboxInputLabelOn htmlFor={id}>Following</CheckboxInputLabelOn>
         ) : (

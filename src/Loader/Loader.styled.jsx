@@ -7,7 +7,6 @@ export const Container = styled.div`
   transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
-
   display: flex;
   justify-content: center;
   align-items: center;
