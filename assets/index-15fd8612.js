@@ -264,6 +264,10 @@ Error generating stack: `+i.message+`
   background: linear-gradient(114.99deg, #471ca9 -0.99%, #5736a3 54.28%, #4b2a99 78.99%);
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
+    @media (max-width: 768px){
+       width: 360px;
+    }
+   
 `,Lx=q.img`
   position: absolute;
   top: 20px;
@@ -273,7 +277,6 @@ Error generating stack: `+i.message+`
   padding-top: 28px;
 `,Ix=q.div`
   margin-top: 30px;
-  width: 380px;
   height: 8px;
   background: #ebd8ff;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06), inset 0px -1.71846px 3.43693px #ae7be3,
@@ -464,6 +467,10 @@ Error generating stack: `+i.message+`
   font-size: 16px;
   line-height: 1.2;
   text-transform: uppercase;
+     @media (max-width: 768px){
+        margin-right: 0px;
+          padding: 4px 8px;
+    }
 
   &.active {
     color: white;
@@ -472,8 +479,15 @@ Error generating stack: `+i.message+`
 `,nS=q.img`
   height: 38px;
   margin-left: 40px;
+      @media (max-width: 768px){
+       height: 28px; 
+       margin-left: 25px;
+    }
 `,rS=q.nav`
   margin-right: 40px;
+        @media (max-width: 768px){
+       margin-right: 0px;
+    }
 `,oS=q.p`
   text-align: center;
   align-items: center;
@@ -484,6 +498,10 @@ Error generating stack: `+i.message+`
   line-height: 1.2;
   text-transform: uppercase;
   text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+        @media (max-width: 768px){
+       font-weight: 400;
+       font-size: 16px;
+        }
 `,iS=q.footer`
   text-align: center;
   position: fixed;
