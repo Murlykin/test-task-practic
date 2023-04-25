@@ -1,7 +1,7 @@
 import { Routes, Route, Link, useLocation, Outlet } from "react-router-dom";
 import { Home } from "../../pages/Home/Home";
 import { Tweets } from "../../pages/Tweets/Tweets";
-// import { NotFound } from "../../pages/NotFound/NotFound";
+import { NotFound } from "../../pages/NotFound/NotFound";
 import logoGoIt from "../../images/goit.png";
 import {
   Header,
@@ -42,7 +42,7 @@ export const App = () => {
         <Route path={routes.HOME} element={<Home />} />
        
         <Route path={routes.TWEETS} element={<Tweets />} />
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
        
       </Routes>
 
