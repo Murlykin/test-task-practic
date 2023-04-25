@@ -399,7 +399,7 @@ Error generating stack: `+i.message+`
   border: none;
   border-radius: 10px;
       @media (max-width: 768px){
-      margin-bottom: 200px;
+      margin-bottom: 120px;
     }
   &:hover {
     color: #373737;
@@ -425,7 +425,7 @@ Error generating stack: `+i.message+`
   border: none;
   border-radius: 10px;
        @media (max-width: 768px){
-      margin-bottom: 200px;
+      margin-bottom: 120px;
       }
   &:hover {
     color: #373737;
