@@ -69,8 +69,7 @@ export const Footer = styled.footer`
   color: black;
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.2;
    box-shadow: rgba(0, 0, 0, 0.27) 0px 18px 20px 15px;
 `;

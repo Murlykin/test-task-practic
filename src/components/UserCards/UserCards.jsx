@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import { getUsers } from "../../servises/usersApi";
 import { Loader } from "../../Loader/Loader";
 import { UserCardsItem } from "../UserCardsItem/UserCardsItem";
-
+import { Link } from "react-router-dom";
 import {
   ListContainer,
   UserCartsList,
   LoadMoreButton,
+  ButtonPosition,
+  BackButton
 } from "./UserCards.styled";
 
 export const UserCards = () => {
@@ -41,14 +43,20 @@ export const UserCards = () => {
           ))}
         </UserCartsList>
       </div>
-      {loadMore && <Loader />}
+        {loadMore && <Loader />}
+        <ButtonPosition>
       <LoadMoreButton
         style={{ display: users.length > 11 ? "none" : "block" }}
         onClick={handleLoadMore}
         type="button"
       >
         {loadMore ? "Loading..." : "LOAD MORE"}
-      </LoadMoreButton>
+        </LoadMoreButton>
+       
+          <Link to="/">
+           <BackButton>Back</BackButton>
+        </Link>
+        </ButtonPosition>
     </ListContainer>
   );
 };
