@@ -26,8 +26,9 @@ export const UserCardsItem = (users) => {
   const [checked, setChecked] = useState(check);
   const [follow, setFollow] = useState(followers);
 
-  useEffect(() => {}, []);
 
+  useEffect(() => {}, []);
+  const formattedFollowers = Number(follow).toLocaleString("en-US");
   const folowersChange = async () => {
     setChecked(!checked);
 
@@ -49,7 +50,7 @@ export const UserCardsItem = (users) => {
       <Avatar src={avatar} alt="user avatar" />
       <User>{user} </User>
       <Tweets>{tweets} TWEETS</Tweets>
-      <Followers>{follow} FOLLOWERS</Followers>
+      <Followers>{formattedFollowers } FOLLOWERS</Followers>
       <CheckboxContainer>
         <CheckboxInput
           type="checkbox"
