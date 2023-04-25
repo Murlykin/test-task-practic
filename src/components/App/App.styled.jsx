@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export const Header = styled.header`
   display: flex;
@@ -73,4 +73,8 @@ export const Footer = styled.footer`
   font-size: 20px;
   line-height: 1.2;
    box-shadow: rgba(0, 0, 0, 0.27) 0px 18px 20px 15px;
+`;
+export const GoBackButton = styled(Link)`
+  padding: 2px 0 18px;
+  margin: 0 auto 0 20px;
 `;

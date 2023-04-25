@@ -8,11 +8,14 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <BrowserRouter basename="/test-task-practic">
+      <App />
+    </BrowserRouter>
+
+
+
     {/* <HashRouter>
       <App />
    </HashRouter> */}
-        <BrowserRouter basename="/test-task-practic/">
-      <App />
-    </BrowserRouter>
   </React.StrictMode>
 );

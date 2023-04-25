@@ -18,7 +18,7 @@ export const UserCards = () => {
     getUsers().then((data) => {
       setUsers(data);
     });
-  }, [setUsers]);
+  }, []);
 
   const handleLoadMore = async () => {
     setLoadMore(true);
