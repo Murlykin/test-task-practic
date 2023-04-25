@@ -15,7 +15,8 @@ export const CardsItem = styled.li`
     @media (max-width: 768px){
        width: 340px;
     }
-   
+       &:hover{
+      transform: scale(1.009)}
 `;
 
 export const Logo = styled.img`
