@@ -27,6 +27,10 @@ export const StyledLink = styled(NavLink)`
   font-size: 16px;
   line-height: 1.2;
   text-transform: uppercase;
+     @media (max-width: 768px){
+        margin-right: 0px;
+          padding: 4px 8px;
+    }
 
   &.active {
     color: white;
@@ -37,10 +41,17 @@ export const StyledLink = styled(NavLink)`
 export const Logo = styled.img`
   height: 38px;
   margin-left: 40px;
+      @media (max-width: 768px){
+       height: 28px; 
+       margin-left: 25px;
+    }
 `;
 
 export const Nav = styled.nav`
   margin-right: 40px;
+        @media (max-width: 768px){
+       margin-right: 0px;
+    }
 `;
 
 export const HeaderText = styled.p`
@@ -53,6 +64,10 @@ export const HeaderText = styled.p`
   line-height: 1.2;
   text-transform: uppercase;
   text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+        @media (max-width: 768px){
+       font-weight: 400;
+       font-size: 16px;
+        }
 `;
 
 export const Footer = styled.footer`
