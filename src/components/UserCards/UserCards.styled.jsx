@@ -39,7 +39,7 @@ export const LoadMoreButton = styled.button`
   border: none;
   border-radius: 10px;
       @media (max-width: 768px){
-      margin-bottom: 200px;
+      margin-bottom: 120px;
     }
   &:hover {
     color: #373737;
@@ -66,7 +66,7 @@ export const BackButton = styled.button`
   border: none;
   border-radius: 10px;
        @media (max-width: 768px){
-      margin-bottom: 200px;
+      margin-bottom: 120px;
       }
   &:hover {
     color: #373737;
