@@ -468,7 +468,7 @@ Error generating stack: `+i.message+`
   line-height: 1.2;
   text-transform: uppercase;
      @media (max-width: 768px){
-        margin-right: 0px;
+        margin-right: 4px;
           padding: 4px 8px;
     }
 
