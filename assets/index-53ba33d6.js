@@ -267,7 +267,8 @@ Error generating stack: `+i.message+`
     @media (max-width: 768px){
        width: 340px;
     }
-   
+       &:hover{
+      transform: scale(1.009)}
 `,Lx=q.img`
   position: absolute;
   top: 20px;
