@@ -265,7 +265,7 @@ Error generating stack: `+i.message+`
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
     @media (max-width: 768px){
-       width: 360px;
+       width: 340px;
     }
    
 `,Lx=q.img`
