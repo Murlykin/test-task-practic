@@ -376,7 +376,7 @@ to{
   background-color: #5cd3a8;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-`,Vx=e=>{const{id:t,avatar:n,tweets:r,followers:o,check:i,user:l}=e.user,[s,a]=_.useState(i),[u,f]=_.useState(o);_.useEffect(()=>{},[]);const p=async()=>{a(!s),s?(f(y=>y-1),await Pf(t,u-1,!1)):(f(y=>y+1),await Pf(t,u+1,!0))};return $.jsxs(Lx,{children:[$.jsx(zx,{src:Nx,alt:"goit logo"}),$.jsx(Ix,{src:Rx,alt:"background image"}),$.jsx($x,{}),$.jsx(bx,{}),$.jsx(Mx,{src:n,alt:"user avatar"}),$.jsxs(Fx,{children:[l," "]}),$.jsxs(Dx,{children:[r," TWEETS"]}),$.jsxs(Ux,{children:[u," FOLLOWERS"]}),$.jsxs(jx,{children:[$.jsx(Bx,{type:"checkbox",id:t,checked:s,onChange:p}),s?$.jsx(Wx,{htmlFor:t,children:"Following"}):$.jsx(Hx,{htmlFor:t,children:"Follow"})]})]},t)},Qx=ne.div`
+`,Vx=e=>{const{id:t,avatar:n,tweets:r,followers:o,check:i,user:l}=e.user,[s,a]=_.useState(i),[u,f]=_.useState(o);_.useEffect(()=>{},[]);const p=Number(u).toLocaleString("en-US"),y=async()=>{a(!s),s?(f(v=>v-1),await Pf(t,u-1,!1)):(f(v=>v+1),await Pf(t,u+1,!0))};return $.jsxs(Lx,{children:[$.jsx(zx,{src:Nx,alt:"goit logo"}),$.jsx(Ix,{src:Rx,alt:"background image"}),$.jsx($x,{}),$.jsx(bx,{}),$.jsx(Mx,{src:n,alt:"user avatar"}),$.jsxs(Fx,{children:[l," "]}),$.jsxs(Dx,{children:[r," TWEETS"]}),$.jsxs(Ux,{children:[p," FOLLOWERS"]}),$.jsxs(jx,{children:[$.jsx(Bx,{type:"checkbox",id:t,checked:s,onChange:y}),s?$.jsx(Wx,{htmlFor:t,children:"Following"}):$.jsx(Hx,{htmlFor:t,children:"Follow"})]})]},t)},Qx=ne.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
