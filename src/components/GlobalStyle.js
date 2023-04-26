@@ -1,4 +1,7 @@
-@import-normalize; /* bring in normalize.css styles */
+import { createGlobalStyle } from "styled-components";
+import 'modern-normalize';
+
+export const GlobalStyle = createGlobalStyle`
 
 body {
  
@@ -7,6 +10,7 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fbfbfb;
 }
 
 code {
@@ -33,3 +37,4 @@ img {
   max-width: 100%;
   height: auto;
 }
+`
