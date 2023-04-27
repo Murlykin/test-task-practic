@@ -57,8 +57,8 @@ export const Avatar = styled.img`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  width: 62px;
-  height: 62px;
+  width: 78px;
+  height: 78px;
   border: 8px solid #ebd8ff;
   border-radius: 50%;
   background-color: #5736a3;
