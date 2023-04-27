@@ -27,6 +27,7 @@ export const StyledLink = styled(NavLink)`
   font-size: 16px;
   line-height: 1.2;
   text-transform: uppercase;
+
      @media (max-width: 768px){
         margin-right: 4px;
           padding: 4px 8px;
